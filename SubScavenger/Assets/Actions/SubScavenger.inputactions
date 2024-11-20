@@ -40,6 +40,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "TakeItem",
+                    "type": "Button",
+                    "id": "dc9d60d4-3fff-4c8f-bdb7-f616243dacfe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DropItem",
+                    "type": "Button",
+                    "id": "3d64202f-0bbe-4b6e-89c7-72c5b209addc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Selection",
+                    "type": "Value",
+                    "id": "77717de5-bdfb-4da6-bd3b-4dd4c396027e",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -249,6 +276,61 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Dive",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "f6accd67-2b36-4afe-9a31-513fc3497d83",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "TakeItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "864b3918-87ad-42d2-9730-6ca0f998b6e6",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "DropItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "01bb3dd3-8c6d-4ef7-8a24-ffe17d2c525e",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selection",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c3179f64-2e76-4165-b2e9-0682ee66d6b0",
+                    "path": "<Mouse>/scroll/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Selection",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "151127d8-de34-4f4c-a0ce-8f160e5c0020",
+                    "path": "<Mouse>/scroll/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Selection",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
