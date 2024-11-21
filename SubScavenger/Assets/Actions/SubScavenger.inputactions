@@ -61,12 +61,12 @@
                 },
                 {
                     "name": "Selection",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "77717de5-bdfb-4da6-bd3b-4dd4c396027e",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -283,7 +283,7 @@
                     "name": "",
                     "id": "f6accd67-2b36-4afe-9a31-513fc3497d83",
                     "path": "<Keyboard>/e",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "TakeItem",
@@ -294,7 +294,7 @@
                     "name": "",
                     "id": "864b3918-87ad-42d2-9730-6ca0f998b6e6",
                     "path": "<Keyboard>/g",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "DropItem",
@@ -302,37 +302,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "01bb3dd3-8c6d-4ef7-8a24-ffe17d2c525e",
-                    "path": "1DAxis",
+                    "name": "",
+                    "id": "454a1c69-2790-4854-b49d-fe6b6d10d57e",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Selection",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "c3179f64-2e76-4165-b2e9-0682ee66d6b0",
-                    "path": "<Mouse>/scroll/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Selection",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "151127d8-de34-4f4c-a0ce-8f160e5c0020",
-                    "path": "<Mouse>/scroll/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Selection",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         },

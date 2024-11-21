@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Search;
+
 
 public class Floater : MonoBehaviour
 {
