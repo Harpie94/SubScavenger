@@ -8,6 +8,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"last_search.30651F47" = "terrain layer"
+	"OpenInspectorPreview.30651F47" = "1"
+	"currentGroup.30651F47" = null
 }
 providers = {
 	find = {
@@ -64,6 +67,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"terrain layert"
 ]
 searchItemFavorites = [
 ]
