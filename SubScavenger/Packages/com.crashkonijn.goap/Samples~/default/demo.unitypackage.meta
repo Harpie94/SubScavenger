@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 63f6d431193efd94eaa40c88e77ac073
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302434
+  packageName: GOAP v3
+  packageVersion: 3.0.0
+  assetPath: Packages/com.crashkonijn.goap/Samples~/default/demo.unitypackage
+  uploadId: 708188

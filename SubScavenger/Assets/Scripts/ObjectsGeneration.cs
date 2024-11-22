@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Objects : MonoBehaviour
 {
+
+    [SerializeField] private float distanceFromGround;
     void Start()
     {
         FindLand();
