@@ -1,23 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    [Header("2 Spawner Max")]
-    public GameObject[] itemSpawners;
-    public GameObject[] fishSpawners;
-    public GameObject[] objects;
-    public float maxItems;
-    public float minItems;
+    [Header("2 Limits Max")]
+    [Header("Items will spawn between the 2 GameObjects below:")]
+    public GameObject[] itemSpawnLimits;
+    
 
-    public float minEnnemies;
-    public float maxEnnemies;
+    [Space(20)]
+    [Header("2 Limits Max")]
+    [Header("Fish will spawn between the 2 GameObjects below:")]
+    public GameObject[] fishSpawnLimits;
+
+
+    [Space(20)]
+    [Header("No limit to the number of items")]
+    [Header("Put Prefabs of items here")]
+    public GameObject[] objects;
+    public float minItems;
+    public float maxItems;
+
+    [Space(20)]
+    [Header("No limit to the number of fishes spawners")]
+    [Header("Put Prefabs of fishes / Fishes spawner here. More Spawners = Heavier impact on FPS")]
+    public GameObject[] fishSpawners;
+    public float minFish;
+    public float maxFish;
+
+    [Space(20)]
+    [Header("No limit to the number of enemies that spawns")]
+    [Header("Put Prefabs of enemies")]
+    public GameObject[] enemies;
+    public float minEnemies;
+    public float maxEnemies;
+
+
+
 
     private float LimitX1, LimitY1, LimitZ1, LimitX2, LimitY2, LimitZ2;
     private float fishLimitX1, fishLimitY1, fishLimitZ1, fishLimitX2, fishLimitY2, fishLimitZ2;
 
-    public GameObject[] ennemy;
     private void Awake()
     {
         
@@ -28,19 +53,19 @@ public class ItemSpawner : MonoBehaviour
 
     private void GetCoords()
     {
-         LimitX1 = itemSpawners[0].gameObject.GetComponent<Transform>().position.x;
-         LimitY1 = itemSpawners[0].gameObject.GetComponent<Transform>().position.y;
-         LimitZ1 = itemSpawners[0].gameObject.GetComponent<Transform>().position.z;
-         LimitX2 = itemSpawners[1].gameObject.GetComponent<Transform>().position.x;
-         LimitY2 = itemSpawners[1].gameObject.GetComponent<Transform>().position.y;
-         LimitZ2 = itemSpawners[1].gameObject.GetComponent<Transform>().position.z;
+         LimitX1 = itemSpawnLimits[0].gameObject.GetComponent<Transform>().position.x;
+         LimitY1 = itemSpawnLimits[0].gameObject.GetComponent<Transform>().position.y;
+         LimitZ1 = itemSpawnLimits[0].gameObject.GetComponent<Transform>().position.z;
+         LimitX2 = itemSpawnLimits[1].gameObject.GetComponent<Transform>().position.x;
+         LimitY2 = itemSpawnLimits[1].gameObject.GetComponent<Transform>().position.y;
+         LimitZ2 = itemSpawnLimits[1].gameObject.GetComponent<Transform>().position.z;
 
-         fishLimitX1 = fishSpawners[0].gameObject.GetComponent<Transform>().position.x;
-         fishLimitY1 = fishSpawners[0].gameObject.GetComponent<Transform>().position.y;
-         fishLimitZ1 = fishSpawners[0].gameObject.GetComponent<Transform>().position.z;
-         fishLimitX2 = fishSpawners[1].gameObject.GetComponent<Transform>().position.x;
-         fishLimitY2 = fishSpawners[1].gameObject.GetComponent<Transform>().position.y;
-         fishLimitZ2 = fishSpawners[1].gameObject.GetComponent<Transform>().position.z;
+         fishLimitX1 = fishSpawnLimits[0].gameObject.GetComponent<Transform>().position.x;
+         fishLimitY1 = fishSpawnLimits[0].gameObject.GetComponent<Transform>().position.y;
+         fishLimitZ1 = fishSpawnLimits[0].gameObject.GetComponent<Transform>().position.z;
+         fishLimitX2 = fishSpawnLimits[1].gameObject.GetComponent<Transform>().position.x;
+         fishLimitY2 = fishSpawnLimits[1].gameObject.GetComponent<Transform>().position.y;
+         fishLimitZ2 = fishSpawnLimits[1].gameObject.GetComponent<Transform>().position.z;
 
 
 
@@ -65,14 +90,24 @@ public class ItemSpawner : MonoBehaviour
 
     private void SpawnEnnemies()
     {
-        float randomNumberOfSharks = Random.Range(maxEnnemies, minEnnemies);
+        float randomNumberOfSharks = Random.Range(maxEnemies, minEnemies);
         int i = 0;
         
         while (i <= randomNumberOfSharks)
         {
-            int randomShark = Random.Range(0, ennemy.Length);
+            int randomShark = Random.Range(0, enemies.Length);
             Vector3 randomSpawnPos = new Vector3(Random.Range(fishLimitX1, fishLimitX2), Random.Range(fishLimitY1, fishLimitY2), Random.Range(fishLimitZ1, fishLimitZ2));
-            Instantiate(ennemy[randomShark], randomSpawnPos, Quaternion.Euler(0, 0, 0));
+            Instantiate(enemies[randomShark], randomSpawnPos, Quaternion.Euler(0, 0, 0));
+            i++;
+        }
+
+        float randomNumberOfFish = Random.Range(maxFish, minFish);
+        i = 0;
+        while (i <= randomNumberOfFish)
+        {
+            int randomFish = Random.Range(0, fishSpawners.Length);
+            Vector3 randomSpawnPos = new Vector3(Random.Range(fishLimitX1, fishLimitX2), Random.Range(fishLimitY1, fishLimitY2), Random.Range(fishLimitZ1, fishLimitZ2));
+            Instantiate(fishSpawners[randomFish], randomSpawnPos, Quaternion.Euler(0, 0, 0));
             i++;
         }
 

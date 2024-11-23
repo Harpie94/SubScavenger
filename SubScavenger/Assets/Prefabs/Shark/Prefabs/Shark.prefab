@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 803994080991005521}
   - component: {fileID: 6346932177312659368}
   - component: {fileID: 3677732437614575717}
-  - component: {fileID: 3677732437614575716}
+  - component: {fileID: 3023879187340385977}
   m_Layer: 31
   m_Name: Shark
   m_TagString: Untagged
@@ -108,7 +108,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 1.5111526, z: -0.6783147}
---- !u!114 &3677732437614575716
+--- !u!114 &3023879187340385977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,15 +117,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4622948576541377396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb5effcc1704b94cae9b5eee849171b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e8253ec400cb3b40b3fc3e4d80ff01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 5
   walkZone: 100
-  camRig: {fileID: 0}
-  debug: 1
-  huntingZone: 85
+  debug: 0
+  huntingZone: 100
   layerFlock:
     serializedVersion: 2
-    m_Bits: 0
-  sharkMaterial: {fileID: 2100000, guid: 3bfe11c511ffb984da89fea8e2997ab1, type: 2}
+    m_Bits: 8704
+  sharkMaterial: {fileID: 2100000, guid: fb6d28d81aa732b4b9652590d81c2c79, type: 2}
