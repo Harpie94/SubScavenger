@@ -48,3 +48,6 @@ But I didn't have enough time to polish the game :(
 Yes 
 I want this game to be a lively underwater world and not what it is now (the oposite lmao) with different biomes the further you go down, and monsters ready to get you at any point.
 My original plan for this game was a horror game (which has failed lol) in an underwater setting (basically Lethal Company + Subnautica)
+
+## If you want to try it for yourself, you can find it here :
+https://harpie94.itch.io/subscavenger
